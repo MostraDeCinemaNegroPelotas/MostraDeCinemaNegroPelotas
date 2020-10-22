@@ -1,0 +1,32 @@
+@import 'styles/config/theme.scss';
+
+.waves {
+    opacity: .4;
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    background: $red;
+    width: 700px;
+    height: 700px;
+    margin-left: -250px;
+    margin-left: -400px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+}
+  
+.waves.-three {
+    animation: drift 5000ms infinite linear;
+}
+  
+.waves.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .1;
+    background: $red;
+}
+
+  
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}

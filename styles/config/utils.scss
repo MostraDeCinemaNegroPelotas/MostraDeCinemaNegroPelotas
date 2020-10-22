@@ -1,0 +1,25 @@
+@mixin font($font-size, $font-weight, $color: white) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin hide() {
+    display: none;
+}
+
+@mixin flex-centered($isColumn:false) { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @if $isColumn { 
+        flex-direction: column;
+    } @else { 
+        flex-direction: row;
+    }
+}
+
+@mixin has-pointer() {
+    cursor: pointer;
+}

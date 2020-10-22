@@ -1,0 +1,51 @@
+.logo-container {
+    width: 608px;
+    height: 608px;
+    position: absolute;
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+}
+
+.logo.label {
+    background-image: url('/texto.png');
+    z-index: 999;
+}
+
+.logo.wave1 {
+    animation: logoRotate 4s cubic-bezier(0.32, 0.46, 0.97, 0.31) infinite;
+    background-image: url('/wave1.png');
+}
+
+.logo.wave2 {
+    background-image: url('/wave3.png');
+    animation: logoRotate 5s cubic-bezier(0.32, 0.46, 0.97, 0.31) infinite;
+}
+
+.logo.wave3 {
+    background-image: url('/wave2.png');
+    animation: logoRotate 6s cubic-bezier(0.32, 0.46, 0.97, 0.31) infinite;
+    top: 10px;
+}
+
+@keyframes logoRotate {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
