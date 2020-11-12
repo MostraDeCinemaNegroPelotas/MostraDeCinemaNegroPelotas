@@ -1,0 +1,39 @@
+// BreakPoints variables
+$xs: '320px';
+$sm: '576px';
+$md: '768px';
+$lg: '1024px';
+$xl: '1440px';
+$xxl: '1920px';
+$xxxl: '2560px';
+
+// BreakPoints Mixins
+@mixin xs($widthOption: 'min-width') {
+    @media ($widthOption: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin sm($widthOption: 'min-width') { 
+     @media ($widthOption: #{$sm}) {
+        @content;
+     }
+}
+
+@mixin md($widthOption: 'min-width') {
+    @media ($widthOption: #{$md}) {
+        @content;
+    }
+}
+ 
+@mixin lg($widthOption: 'min-width') {
+    @media ($widthOption: #{$lg}) {
+        @content;
+    }
+}
+ 
+@mixin xl($widthOption: 'min-width') {
+    @media ($widthOption: #{$xl}) {
+        @content;
+    }
+}
