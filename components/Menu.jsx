@@ -4,7 +4,7 @@ const Menu = () => {
   const [isOpened, setIsOpened] = useState(true)
 
   return (
-    <nav>
+    <nav className={!isOpened && 'menubar-opened'}>
       <div className="menubar">
         <div className="icons">
           <i

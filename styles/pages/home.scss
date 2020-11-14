@@ -6,4 +6,11 @@
     @include lg() {
         flex-direction: row-reverse;
     }
+
+    @include lg('max-width') {
+        .menubar-opened + .logo-container {
+            display: none;
+        }
+    }
+
 }
