@@ -10,7 +10,7 @@ export default {
       value: 3,
       random: true,
       anim: {
-        speed: 4,
+        speed: 10,
         size_min: 0.3
       }
     },
@@ -19,7 +19,7 @@ export default {
     },
     move: {
       random: true,
-      speed: 1,
+      speed: 10,
       out_mode: 'out'
     }
   },

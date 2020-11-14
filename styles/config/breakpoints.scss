@@ -1,0 +1,59 @@
+// Breakpoints
+
+// Mobile
+$xs: 320px;
+$sm: 640px;
+$md: 768px;
+
+//Notebook
+$lg: 1024px;
+$xl: 1440px;
+
+// Desktop
+$xxl: 1920px;
+$xxxl: 2560px;
+
+
+// Mixins 
+@mixin xs($widthType: 'min-width') {
+   @media ($widthType: #{$xs}) {
+       @content;
+   }
+}
+
+@mixin sm($widthType: 'min-width') {
+   @media ($widthType: #{$sm}) {
+       @content;
+   }
+}
+
+@mixin md($widthType: 'min-width') {
+   @media ($widthType: #{$md}) {
+       @content;
+   }
+}
+
+@mixin lg($widthType: 'min-width') {
+   @media ($widthType: #{$lg}) {
+       @content;
+   }
+}
+
+@mixin xl($widthType: 'min-width') {
+   @media ($widthType: #{$xl}) {
+       @content;
+   }
+}
+
+@mixin xxl($widthType: 'min-width') {
+   @media ($widthType: #{$xxl}) {
+       @content;
+   }
+}
+
+@mixin xxxl($widthType: 'min-width') {
+   @media ($widthType: #{$xxxl}) {
+       @content;
+   }
+}
+
