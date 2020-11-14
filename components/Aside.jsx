@@ -1,6 +1,6 @@
-import Waves from '../Waves'
-import Particles from '../Particles'
-import SocialLinks from '../SocialLinks'
+import Waves from './Waves'
+import Particles from './Particles'
+import SocialLinks from './SocialLinks'
 
 const Aside = () => {
   return (
