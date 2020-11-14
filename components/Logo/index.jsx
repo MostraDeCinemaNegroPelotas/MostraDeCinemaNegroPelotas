@@ -1,6 +1,5 @@
 import Particles from '../Particles'
 import LogoSpinners from './LogoSpinners'
-// import LogoSponsors from './LogoSponsors'
 
 const Logo = () => {
   return (
@@ -8,7 +7,6 @@ const Logo = () => {
       <Particles/>
       <div className="logo-img"></div>
       <LogoSpinners />
-      {/* <LogoSponsors /> */}
     </div>
   )
 }

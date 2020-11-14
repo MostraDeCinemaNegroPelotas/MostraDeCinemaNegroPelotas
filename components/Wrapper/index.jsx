@@ -1,11 +1,7 @@
 const Wrapper = ({ className, children, background }) => {
   return (
-    <main
-      className={`${className} wrapper`}
-    >
-      { !!background &&
-          <img src={background} className="wrapper-bg"/>
-      }
+    <main className={`${className} wrapper`}>
+      { !!background && <img src={background} className="wrapper-bg"/>}
       {children}
     </main>
   )

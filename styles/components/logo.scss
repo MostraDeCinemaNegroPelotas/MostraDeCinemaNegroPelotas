@@ -56,14 +56,6 @@
         animation: logoRotate 6s cubic-bezier(0.32, 0.46, 0.97, 0.31) infinite;
     }
 
-    &-sponsors {
-
-        img {
-            
-        }
-    }
-
-
     @include lg {
         &-img { 
             max-width: 40%;
