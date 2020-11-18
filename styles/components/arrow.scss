@@ -1,0 +1,28 @@
+.arrow { 
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -22px !important;
+    z-index: 999;
+    
+    @include md {
+        height: 50px;
+    }
+
+    &-left { 
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23ffffff'/></svg>");
+        left: auto;        
+        right: 10px;
+    }
+    
+    &-right { 
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23ffffff'/></svg>");
+        right: auto;
+        left: 10px;
+    }
+}

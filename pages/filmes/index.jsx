@@ -1,27 +1,43 @@
-import Wrapper from 'components/Wrapper'
-import MoviesWrapper from 'components/Movies/MoviesWrapper'
-import Movies from 'components/Movies/Movies'
-import moviesMock from './movies'
+import { useSelector, useDispatch} from 'react-redux'
+import { getCatalogoByPrograma, getAllProgramaNumbers } from 'Redux/catalogos'
+import { getPlayerData } from 'Redux/player'
+import UiWrapper from 'components/UiWrapper'
+import Link from 'next/link'
+import Slide from 'components/Slide'
+import ModalVideo from 'react-modal-video'
+import { triggerPlayer} from 'Redux/player'
 
-const Filmes = () => {
-  const createMovies = () => {
-    return (
-      moviesMock.map((movies, index) =>
-        <Movies movies={movies} key={index}/>
-      )
-    )
-  }
+const renderCurrentYear = () => new Date().getFullYear(); 
+
+const pageFilmes = () => {
+  const getCatalogoByProgramaFn = useSelector(getCatalogoByPrograma);
+  const getAllProgramaNumbersFn = useSelector(getAllProgramaNumbers);
+  const playerData = useSelector(getPlayerData);
+  const dispatch = useDispatch()
 
   return (
-    <Wrapper padding="50px 120px" className="movies-page">
-      <h3 style={{ fontSize: '3em', marginBottom: '30px' }}> Catálogo 2020 </h3>
-
-      <MoviesWrapper>
-        { createMovies() }
-      </MoviesWrapper>
-
-    </Wrapper>
+    <UiWrapper className="filmes-page" id="particles-js">
+      <section className="filmes-header">
+        <h2>Catalogo {renderCurrentYear()}</h2>
+        <Link href="/">
+          <img src="/logo-waves.png"  />
+        </Link>
+      </section>
+      {(
+        [...getAllProgramaNumbersFn].map(
+          (programaNumber, index) => (
+            <section className="filmes-list" key={index}>
+              <h1>
+                PROGRAMA {programaNumber}
+              </h1>
+              <Slide filmes={getCatalogoByProgramaFn(programaNumber)}/>
+            </section>
+          )
+        )
+      )}
+      <ModalVideo channel='youtube' autoplay isOpen={playerData.open} videoId={playerData.movieUrl} onClose={() => dispatch((triggerPlayer()))} />
+    </UiWrapper>
   )
 }
 
-export default Filmes
+export default pageFilmes

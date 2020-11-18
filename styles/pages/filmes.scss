@@ -1,0 +1,44 @@
+$pagePadding: 4rem;
+
+.filmes {
+    &-page {
+        display: flex;
+        flex-direction: column;    
+        justify-content: center;
+        padding: $pagePadding 0;
+        color: white;
+        background-color: black;
+        background: url('/bg-red.png');
+    
+        h1 { 
+            font-size: $pagePadding - .5rem;
+            margin-bottom: $pagePadding - 2rem;
+            padding: 0 $pagePadding;
+        }
+    
+        h2 {
+            font-size: $pagePadding - 1rem;
+            margin-bottom: $pagePadding - 1rem;
+    
+        }
+        .ui-wrapper-bg {
+            z-index: -1;
+        }
+    }
+
+    &-list:not(:first-child) { 
+        margin-bottom: $pagePadding - 1rem;
+    }
+
+    &-header { 
+        padding: 0 $pagePadding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        img { 
+            width: 200px;
+            cursor: pointer;
+        }
+    }
+}

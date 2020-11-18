@@ -2,15 +2,22 @@
 @import 'styles/config/reset.scss';
 @import 'styles/config/theme.scss';
 @import 'styles/config/utils.scss';
+@import 'styles/config/breakpoints.scss';
 
-// Components
-@import 'styles/components/aside.scss';
-@import 'styles/components/text.scss';
-@import 'styles/components/waves.scss';
-@import 'styles/components/particles.scss';
-@import 'styles/components/menu.scss';
-@import 'styles/components/social_links.scss';
-@import 'styles/components/logo.scss';
+//Components
+@import 'styles/components/aside';
+@import 'styles/components/logo';
+@import 'styles/components/menu';
+@import 'styles/components/particles';
+@import 'styles/components/social-links';
+@import 'styles/components/waves';
+@import 'styles/components/ui-wrapper';
+@import 'styles/components/arrow';
+@import 'styles/components/swiper';
+@import 'styles/components/movie';
 
 //Pages
 @import 'styles/pages/home.scss';
+@import 'styles/pages/filmes.scss';
+
+

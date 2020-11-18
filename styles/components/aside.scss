@@ -1,14 +1,30 @@
-@import 'styles/config/theme';
-@import 'styles/config/utils';
-
 .aside {
-    height: 100vh;
-    max-width: 435px;
+    background: url('/bg-yellow.png') no-repeat center center;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background: $blue;
-    display: flex;
-    transition: 0.6s all ease-in-out;
     @include flex-centered(true);
     @include has-pointer();
+
+    @include lg {
+        flex: 2;
+    }
+
+    @include xl {
+        flex: 2.5;
+    }
+
+    &-logo,
+    &-text {
+        margin: auto ;
+    }
+    
+    &-logo {
+        width: 50%;
+    }
+    
+    &-text {
+        width: 80%;
+    }
 }
+

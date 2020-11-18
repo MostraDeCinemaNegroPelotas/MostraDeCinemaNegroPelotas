@@ -1,39 +1,59 @@
-// BreakPoints variables
-$xs: '320px';
-$sm: '576px';
-$md: '768px';
-$lg: '1024px';
-$xl: '1440px';
-$xxl: '1920px';
-$xxxl: '2560px';
+// Breakpoints
 
-// BreakPoints Mixins
-@mixin xs($widthOption: 'min-width') {
-    @media ($widthOption: #{$xs}) {
-        @content;
-    }
+// Mobile
+$xs: 320px;
+$sm: 640px;
+$md: 768px;
+
+//Notebook
+$lg: 1024px;
+$xl: 1440px;
+
+// Desktop
+$xxl: 1920px;
+$xxxl: 2560px;
+
+
+// Mixins 
+@mixin xs($widthType: 'min-width') {
+   @media ($widthType: #{$xs}) {
+       @content;
+   }
 }
 
-@mixin sm($widthOption: 'min-width') { 
-     @media ($widthOption: #{$sm}) {
-        @content;
-     }
+@mixin sm($widthType: 'min-width') {
+   @media ($widthType: #{$sm}) {
+       @content;
+   }
 }
 
-@mixin md($widthOption: 'min-width') {
-    @media ($widthOption: #{$md}) {
-        @content;
-    }
+@mixin md($widthType: 'min-width') {
+   @media ($widthType: #{$md}) {
+       @content;
+   }
 }
- 
-@mixin lg($widthOption: 'min-width') {
-    @media ($widthOption: #{$lg}) {
-        @content;
-    }
+
+@mixin lg($widthType: 'min-width') {
+   @media ($widthType: #{$lg}) {
+       @content;
+   }
 }
- 
-@mixin xl($widthOption: 'min-width') {
-    @media ($widthOption: #{$xl}) {
-        @content;
-    }
+
+@mixin xl($widthType: 'min-width') {
+   @media ($widthType: #{$xl}) {
+       @content;
+   }
 }
+
+@mixin xxl($widthType: 'min-width') {
+   @media ($widthType: #{$xxl}) {
+       @content;
+   }
+}
+
+@mixin xxxl($widthType: 'min-width') {
+   @media ($widthType: #{$xxxl}) {
+       @content;
+   }
+}
+

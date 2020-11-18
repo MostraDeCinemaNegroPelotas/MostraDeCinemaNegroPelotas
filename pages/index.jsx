@@ -1,15 +1,19 @@
-import Aside from 'components/Aside';
-import Menu from 'components/Menu';
-import SocialLinks from 'components/social_links/SocialLinks';
-import Logo from 'components/Logo';
+import Aside from 'components/Aside'
+import Menu from 'components/Menu'
+import Logo from 'components/Logo'
+import UiWrapper from 'components/UiWrapper'
 
-export default function Home() {
-    return (
-        <main className="home-page">
-            <Aside />
-            <Menu />
-            <Logo />
-            <SocialLinks />
-        </main>
-    );
+const pageHome = () => {
+  return (
+    <UiWrapper
+      background="/bg-blue-flower.png"
+      className="home-page"
+    >
+      <Menu />
+      <Logo />
+      <Aside />
+    </UiWrapper>
+  )
 }
+
+export default pageHome

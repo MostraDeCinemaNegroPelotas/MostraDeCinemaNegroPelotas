@@ -1,18 +1,20 @@
+
 {
     "env": {
         "browser": true,
         "es2021": true,
         "es6": true
     },
-    "extends": [
-        "plugin:prettier/recommended",
-        "airbnb"
-    ],
+    "extends": "standart",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    }, 
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
@@ -20,8 +22,13 @@
         "import"
     ],
     "rules": {
+        "no-unused-vars": "off",
         "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, {
         "extensions": [".js", ".jsx"]}
-    ]}
-}
+    ]},
+    "react/jsx-no-undef": ["true", { "allowGlobals": true }],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+};

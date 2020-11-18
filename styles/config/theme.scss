@@ -1,9 +1,13 @@
+// Font 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 
 // Theme
-
 $blue: #0E1540;
 $green: #195359;
 $yellow: #D9843B;
 $pink: #F2E1D8;
 $red: #8C0707; 
 
+body { 
+    font-family: 'Playfair Display', serif;
+}
