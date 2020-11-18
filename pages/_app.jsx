@@ -3,9 +3,8 @@ import { Provider } from 'react-redux'
 import Head from 'next/head'
 import store from '../store'
 import 'styles/main.scss'
-import '@brainhubeu/react-carousel/lib/style.css'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'swiper/swiper.scss';
+import 'react-modal-video/scss/modal-video.scss';
 
 const MyApp = ({ Component, pageProps }) => {
   return (

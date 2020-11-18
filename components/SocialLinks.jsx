@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as Brands from '@fortawesome/free-brands-svg-icons'
 

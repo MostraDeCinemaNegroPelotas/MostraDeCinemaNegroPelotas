@@ -6,13 +6,16 @@
     width: 100%;
 
     &-item {
-        display: inline-block;
         padding: 20px;
         font-size: 45px;
         color: $red;
         border-radius: 50%;
         cursor: pointer;
         opacity: 0.6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
     }
 
     &-item:hover {
@@ -23,5 +26,9 @@
     &-item,
     &-item:hover {
         transition: 0.6s all ease;
+    }
+
+    &-item svg { 
+        width: 2.7rem;
     }
 }

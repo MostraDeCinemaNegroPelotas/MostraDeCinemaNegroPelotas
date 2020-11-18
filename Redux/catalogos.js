@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-
 const catalogosSlice = createSlice({
   name: 'catalogos',
   initialState: [
@@ -11,6 +10,8 @@ const catalogosSlice = createSlice({
       estado: 'São Paulo, SP',
       minutos: 6,
       link: 'https://youtu.be/mJygIYO7OjA',
+      pic: '/fotos/4.jpg',
+      votacao: 'https://forms.gle/fQaVx3Ljx3ikSTwD6',
     },
     {
       programa: 1,
@@ -19,7 +20,9 @@ const catalogosSlice = createSlice({
       estado: 'Pelotas, RS',
       minutos: 8,
       link: 'https://youtu.be/8zckL3gFmpc',
-    },   
+      pic: '/fotos/5.jpg',
+      votacao: 'https://forms.gle/zTieW6sN8UVqDNwt8',
+    },
     {
       programa: 2,
       nomedofilme: 'Meninos Rimam',
@@ -27,6 +30,8 @@ const catalogosSlice = createSlice({
       estado: 'São Carlos, SP',
       minutos: 20,
       link: 'https://youtu.be/XNCOx3t__gQ',
+      pic: '/fotos/6.jpg',
+      votacao: 'https://forms.gle/J9Znza9fnR6FrwZr5',
     },
     {
       programa: 2,
@@ -35,6 +40,8 @@ const catalogosSlice = createSlice({
       estado: 'Aracaju, SE',
       minutos: 19,
       link: 'https://youtu.be/D1kllrQwSWc',
+      pic: '/fotos/8.jpg',
+      votacao: 'https://forms.gle/JUVV7f92Wu6PYNCM9',
     },
     {
       programa: 2,
@@ -43,6 +50,8 @@ const catalogosSlice = createSlice({
       estado: 'Salto, SP',
       minutos: 15,
       link: 'https://youtu.be/dxcPG5qHK3U',
+      pic: '/fotos/9.jpg',
+      votacao: 'https://forms.gle/mnvLKtf45mEYkGi16',
     },
     {
       programa: 3,
@@ -51,6 +60,8 @@ const catalogosSlice = createSlice({
       estado: 'Recife, PE',
       minutos: 5,
       link: 'https://youtu.be/vnI68VBRd4E',
+      pic: '/fotos/11.jpg',
+      votacao: 'https://forms.gle/uG1qUvvFrh5Coa6k7',
     },
     {
       programa: 3, 
@@ -59,6 +70,8 @@ const catalogosSlice = createSlice({
       estado:'Fortaleza, CE',
       minutos: 12 ,
       link: 'https://youtu.be/0SCbA1C7RlU',
+      pic: '/fotos/12.jpg',
+      votacao: 'https://forms.gle/kZJJE1xkHwhwtQ346',
     },
     {
       programa: 3,
@@ -67,6 +80,8 @@ const catalogosSlice = createSlice({
       estado: 'Juiz de Fora, MG',
       minutos: 14,
       link: 'https://youtu.be/OUqNo3MmphE',
+      pic: '/fotos/13.jpg',
+      votacao: 'https://forms.gle/RdYMypy4P4ntsNqZ9',
     },
     {
       programa: 4,
@@ -75,6 +90,8 @@ const catalogosSlice = createSlice({
       estado: 'Porto Seguro, BA',
       minutos: 6,
       link: 'https://youtu.be/XUm131QQQ5Y',
+      pic: '/fotos/15.jpg',
+      votacao: 'https://forms.gle/GTAVp1PL3G1APzU69',
     },
     {
       programa: 4,
@@ -83,6 +100,8 @@ const catalogosSlice = createSlice({
       estado: 'Duque de Caxias/RJ',
       minutos: 14,
       link: 'https://youtu.be/9_RrLbhgdAM',
+      pic: '/fotos/16.jpg',
+      votacao: 'https://forms.gle/nXQoDvMb5EcoADZU6',
     },
     {
       programa: 4,
@@ -91,6 +110,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 3,
       link: 'https://youtu.be/FrGjCwZUITo',
+      pic: '/fotos/17.jpg',
+      votacao: 'https://forms.gle/xUhCVVzPYmQz8qCn8',
     },
     {
       programa: 4,
@@ -99,7 +120,8 @@ const catalogosSlice = createSlice({
       estado: 'Sao Luis, MA',
       minutos: 15,
       link: 'https://youtu.be/AP7l-GF55h8',
-        
+      pic: '/fotos/18.jpg',
+      votacao: 'https://forms.gle/ijaMnCgPrzt1UWAo8',
     },
     {
       programa: 5,
@@ -108,6 +130,8 @@ const catalogosSlice = createSlice({
       estado: 'Vitória, ES',
       minutos: 16,
       link: 'https://youtu.be/7zmA1_2XzSE',
+      pic: '/fotos/20.jpg',
+      votacao: 'https://forms.gle/GGo2qbx8kcxoA1mz8',
     },
     {
       programa: 5,
@@ -116,7 +140,8 @@ const catalogosSlice = createSlice({
       estado: 'Goiânia e Pirenópolis, GO',
       minutos: 20,
       link: 'https://youtu.be/CBRcn7jsfbs',
-        
+      pic: '/fotos/21.jpg',
+      votacao: 'https://forms.gle/jk93M9xou4bQShnY7',
     },
     {
       programa: 5,
@@ -125,6 +150,8 @@ const catalogosSlice = createSlice({
       estado: 'Cachoeira, BA',
       minutos: 4,
       link: 'https://youtu.be/GtXTrFwiY9A',
+      pic: '/fotos/22.jpg',
+      votacao: 'https://forms.gle/ohNPNdfmeTV7WrBP8',
     },
     {
       programa: 5,
@@ -133,6 +160,8 @@ const catalogosSlice = createSlice({
       estado: 'Vitoria, ES',
       minutos: 19,
       link: 'https://youtu.be/xcEAhmI0PVQ',
+      pic: '/fotos/23.jpg',
+      votacao: 'https://forms.gle/B9XcaY1yNCQLb56C8',
     },
     {
       programa: 5,
@@ -141,6 +170,8 @@ const catalogosSlice = createSlice({
       estado: 'Belo Horizonte, MG',
       minutos: 23,
       link: 'https://youtu.be/XXwT1GGLun8',
+      pic: '/fotos/24.jpg',
+      votacao: 'https://forms.gle/FBRtB3ePeTsUpVa59',
     },
     {
       programa: 6,
@@ -149,7 +180,8 @@ const catalogosSlice = createSlice({
       estado: 'Natal, RN',
       minutos: 13,
       link: 'https://youtu.be/RSP68YMj5Fc',
-    
+      pic: '/fotos/26.jpg',
+      votacao: 'https://forms.gle/KGe5yk4Ws1QXqmgZ8',
     },
     {
       programa: 6,
@@ -158,6 +190,8 @@ const catalogosSlice = createSlice({
       estado: 'Salvador, BA',
       minutos: 15,
       link: 'https://youtu.be/Uy3ZkpEhibs',
+      pic: '/fotos/27.jpg',
+      votacao: 'https://forms.gle/jiKwkjEtPiBVBxAC7',
     },
     {
       programa: 6,
@@ -166,6 +200,8 @@ const catalogosSlice = createSlice({
       estado: 'São Paulo SP',
       minutos: 6,
       link: 'https://youtu.be/RA4R0uiDrsY',
+      pic: '/fotos/28.jpg',
+      votacao: 'https://forms.gle/qbky57vJYG4ma4pS7',
     },
     {
       programa: 6,
@@ -174,7 +210,8 @@ const catalogosSlice = createSlice({
       estado: 'Cachoeira, BA',
       minutos: 29,
       link: 'https://youtu.be/aRnobOUm6O8',
-    
+      pic: '/fotos/29.jpg',    
+      votacao: 'https://forms.gle/HFqveuMiHNKDAy4s8',
     },
     {
       programa: 7,
@@ -183,6 +220,8 @@ const catalogosSlice = createSlice({
       estado: 'Ribeirão das Neves, MG',
       minutos: 16,
       link: 'https://youtu.be/XscSsINtphw',
+      pic: '/fotos/31.jpg',    
+      votacao: 'https://forms.gle/1gaJh25bZHTtYVB88',
     },
     {
       programa: 7,
@@ -191,6 +230,8 @@ const catalogosSlice = createSlice({
       estado: 'São Paulo, SP',
       minutos: 29,
       link: 'https://youtu.be/HBzTspgYtNo',
+      pic: '/fotos/32.jpg',    
+      votacao: 'https://forms.gle/2DS1rjjsZ1nshW5S8',
     },
     {
       programa: 7,
@@ -199,6 +240,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 12,
       link: 'https://youtu.be/3mpYUrxW4P0',
+      pic: '/fotos/33.jpg',    
+      votacao: 'https://forms.gle/CxSxZ9Rz9AUB9Akv8',
     },
     {
       programa: 8,
@@ -207,6 +250,8 @@ const catalogosSlice = createSlice({
       estado: 'Maceió, AL',
       minutos: 20,
       link: 'https://youtu.be/gTaNRl6j3BI',
+      pic: '/fotos/35.jpg',    
+      votacao: 'https://forms.gle/wAu2jVQzTEfLMkx2A',
     },
     {
       programa: 8,
@@ -215,6 +260,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 13,
       link: 'https://youtu.be/5JQwHIJTQWo',
+      pic: '/fotos/36.jpg',    
+      votacao: 'https://forms.gle/FRC8PiZUK2zSLpPeA',
     },
     {
       programa: 8,
@@ -223,6 +270,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 14,
       link: 'https://youtu.be/7DXF-YQ1Rz0',
+      pic: '/fotos/37.jpg',    
+      votacao: 'https://forms.gle/arPU4tmKUQGMKGXPA',
     },
     {
       programa: 9,
@@ -231,6 +280,8 @@ const catalogosSlice = createSlice({
       estado: 'Juiz de Fora, MG',
       minutos: 10,
       link: 'https://youtu.be/2KqxKdULtmU',
+      pic: '/fotos/39.jpg',    
+      votacao: 'https://forms.gle/JR1ScSpc6kWCj9eK9',
     },
     {
       programa: 9,
@@ -239,6 +290,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 22,
       link: 'https://youtu.be/8jA22brvcdI',
+      pic: '/fotos/40.jpg',    
+      votacao: 'https://forms.gle/LJRW24YeDQJ1L1HY7',
     },
     {
       programa: 9,
@@ -247,7 +300,8 @@ const catalogosSlice = createSlice({
       estado: 'São Paulo, SP',
       minutos: 20,
       link: 'https://youtu.be/n0dkrkQO6Ik',
-    
+      pic: '/fotos/41.jpg',        
+      votacao: 'https://forms.gle/9GBNhA7JhpKa3k7q7',
     },
     {
       programa: 9,
@@ -256,6 +310,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro, RJ',
       minutos: 18,
       link: 'https://youtu.be/cypfTAg_5q0',
+      pic: '/fotos/42.jpg',        
+      votacao: 'https://forms.gle/EDR56pSxqWt7xMac7',
     },
     {
       programa: 10,
@@ -264,6 +320,8 @@ const catalogosSlice = createSlice({
       estado: 'Salvador, BA',
       minutos: 13,
       link: 'https://youtu.be/I7iy5CzF-mU',
+      pic: '/fotos/44.jpg',        
+      votacao: 'https://forms.gle/CujQRj37QjCKjhLUA',
     },
     {
       programa: 10,
@@ -272,14 +330,19 @@ const catalogosSlice = createSlice({
       estado: 'Belo Horizonte, MG',
       minutos: 12,
       link: 'https://youtu.be/eNdMuKZuOoA',
+      pic: '/fotos/45.jpg',        
+      votacao: 'https://forms.gle/uSkXVEZs8a7HpbSF8',
     },
-    // {
-    //   programa: 10,
-    //   nomedofilme: 'Ensaio',
-    //   direcao: 'Carol Sousa e Grenda Costa',
-    //   estado: 'Fortaleza, CE',
-    //   minutos: 3,
-    // },
+    {
+      programa: 10,
+      nomedofilme: 'Ensaio',
+      direcao: 'Carol Sousa e Grenda Costa',
+      estado: 'Fortaleza, CE',
+      minutos: 3,
+      link: 'https://youtu.be/B0oNaeUKqAc',   
+      pic: '/fotos/46.jpg',     
+      votacao: 'https://forms.gle/6xPdmFdts6v5RGuW9',
+    },
     {
       programa: 10,
       nomedofilme: 'Cão Maior',
@@ -287,6 +350,8 @@ const catalogosSlice = createSlice({
       estado: 'Brasília, DF',
       minutos: 20,
       link: 'https://youtu.be/oF8M5ZvNUPY',
+      pic: '/fotos/47.jpg',        
+      votacao: 'https://forms.gle/fdMennQTGxLdvzsE9',
     },
     {
       programa: 10,
@@ -295,6 +360,8 @@ const catalogosSlice = createSlice({
       estado: 'Rio de Janeiro/ Niterói, RJ',
       minutos: 4,
       link: 'https://youtu.be/vLwEBtYYURA',
+      pic: '/fotos/48.jpg',        
+      votacao: 'https://forms.gle/AHo7hH5UzQiiHYG77',
     },
   ]
 })

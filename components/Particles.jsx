@@ -1,7 +1,7 @@
 /* eslint-disable import/no-named-default */
 import { default as Particlejs } from 'react-particles-js'
 
-const Particles = () => {
+const Particles = ({params}) => {
   const data = {
     particles: {
       number: {
@@ -14,7 +14,7 @@ const Particles = () => {
         value: 3,
         random: true,
         anim: {
-          speed: 10,
+          speed: 7,
           size_min: 0.3
         }
       },
@@ -56,7 +56,7 @@ const Particles = () => {
   return (
     <Particlejs
       canvasClassName="particles"
-      params={data}
+      params={params != null ? params :  data}
     />
   )
 }

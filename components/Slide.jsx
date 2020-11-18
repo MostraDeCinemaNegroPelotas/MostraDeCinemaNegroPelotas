@@ -1,67 +1,108 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import Arrow from 'components/Arrow';
-const HUGE_NUMBER = Number.MAX_VALUE;
+import React, { useRef } from 'react';
+import { useDispatch } from 'react-redux'
+import Swiper from 'react-id-swiper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as Icons from '@fortawesome/free-solid-svg-icons'
+import ReactTooltip from 'react-tooltip'
+import { triggerPlayer} from 'Redux/player'
 
-export default class Slide extends Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.renderList = this.renderList.bind(this);
+const MutipleSlidesPerView = ({ filmes }) => {
+  const dispatch = useDispatch()
+  const ref = useRef(null);
+
+  const goNext = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slideNext();
+    }
   }
 
-  next() {
-    this.slider.slickNext();
+  const goPrev = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slidePrev();
+    }
+  };
+
+  const params = {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    grabCursor: true,
+    lazy: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      769: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      }
+    },
+    navigation: {
+      nextEl: '.arrow-left .arrow',
+      prevEl: '.arrow-right .arrow'
+    },
+    renderPrevButton: () => {
+      return (
+        <div onClick={goPrev} class="arrow-right arrow"></div>
+      )
+    },
+    renderNextButton: () => {
+      return ( 
+        <div onClick={goNext} class="arrow-left arrow"></div>
+      )
+    },
   }
 
-  previous() {
-    this.slider.slickPrev();
+  const playMovie = (filme) =>  dispatch((triggerPlayer(filme.link)))
+  
+  const voteMovie = (filme) => { 
+    if(process.browser) { 
+      window.open(filme.votacao,'_blank');
+    }
   }
 
-  renderList() { 
-    return ( 
-        [1,2,3].map((index) => (
-            <div className="slick-item" key={index}>                
-                {index}
+
+  return (
+    <div>
+      <Swiper  ref={ref} {...params}>
+        {
+          filmes.map((filme, index) => (
+            <div className="movie-item" key={index}>        
+              <div className="movie-item-content">
+                <img key={index} className="movie-thumbnail" src={filme.pic}/>
+                <div className="movie-play-icon" onClick={() => playMovie(filme)}>
+                  <FontAwesomeIcon icon={Icons["faPlay"]} />
+                </div>
+                <div className="movie-details">
+                  <p className="movie-details-name"> {filme.nomedofilme} </p>
+                  <p className="movie-details-info"> Direção: {filme.direcao} </p>
+                  <p className="movie-details-info"> {filme.estado} </p>
+                  <div className="movie-details-info"> 
+                    <div className="movie-details-time">
+                      <FontAwesomeIcon icon={Icons["faClock"]} /> 
+                      <p> {filme.minutos} min </p>
+                    </div>
+                    <div className="movie-details-favorite" onClick={() => voteMovie(filme)}>
+                      <FontAwesomeIcon data-tip data-for='tooltip-favorite' icon={Icons["faHeart"]} />
+                      <ReactTooltip id='tooltip-favorite' type='error'>
+                        <span>Clique para votar no filme</span>
+                      </ReactTooltip>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        ))
-    );
-  }
-
-  render() {
-    const defaultBreakpointsSettings = {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-    }
-
-    const settings = {
-        infinite: true,
-        slidesToScroll: 1,
-        centerMode: true,
-        slidesToShow: 3,
-        focusOnSelect: true,
-        arrows: true,
-        responsive: [
-            {
-                breakpoint: HUGE_NUMBER,
-                settings: defaultBreakpointsSettings
-            },
-            {
-                breakpoint: 320,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ],
-        prevArrow: <Arrow side="left"  leftClickHandle={this.previous}/>,
-        nextArrow: <Arrow side="right" rightClickHandle={this.next}/>
-    }
-    return (
-        <Slider ref={c => (this.slider = c)} {...settings}>
-            {this.renderList()}
-        </Slider>
-    );
-  }
-}
+          ))
+        }
+      </Swiper>
+    </div>
+  )
+};
+export default MutipleSlidesPerView;

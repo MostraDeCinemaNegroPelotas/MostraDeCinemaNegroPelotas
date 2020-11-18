@@ -1,32 +1,28 @@
 .arrow { 
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-    -webkit-appearance: none;
-    text-align: inherit;
-    outline: none;
     position: absolute;
-    z-index: 2;
-    fill: white;
-    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -22px !important;
+    z-index: 999;
     
-    svg { 
-        transform: scale(5);
+    @include md {
+        height: 50px;
     }
 
     &-left { 
-        left: 15px;
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23ffffff'/></svg>");
+        left: auto;        
+        right: 10px;
     }
-
+    
     &-right { 
-        right: 15px;
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23ffffff'/></svg>");
+        right: auto;
+        left: 10px;
     }
 }
