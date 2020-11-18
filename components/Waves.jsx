@@ -1,4 +1,4 @@
-const Waves = () => {
+const Waves = React.memo(() => {
   return (
     <div className="waves-container">
       <div className='waves waves-one'></div>
@@ -6,6 +6,6 @@ const Waves = () => {
       <div className='waves waves--three'></div>
     </div>
   )
-}
+})
 
 export default Waves

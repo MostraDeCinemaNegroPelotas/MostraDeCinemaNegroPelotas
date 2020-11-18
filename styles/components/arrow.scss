@@ -1,0 +1,32 @@
+.arrow { 
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+    text-align: inherit;
+    outline: none;
+    position: absolute;
+    z-index: 2;
+    fill: white;
+    position: absolute;
+    
+    svg { 
+        transform: scale(5);
+    }
+
+    &-left { 
+        left: 15px;
+    }
+
+    &-right { 
+        right: 15px;
+    }
+}

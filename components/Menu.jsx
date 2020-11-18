@@ -1,62 +1,38 @@
 import { useState } from 'react'
+import Link from 'next/link'
+import { useSelector } from 'react-redux'
+import { menu } from 'Redux/menu'
 
 const Menu = () => {
   const [isOpened, setIsOpened] = useState(true)
+  const menuData = useSelector(menu);
+
+  const createLinks = () => { 
+    return ( 
+      menuData.map((data, index) => (
+        <li key={index} className="menu-link">
+          <Link href={data.href}>
+            <a className="text-item">{data.label}</a>
+          </Link>
+        </li> 
+      ))
+    )
+  }
 
   return (
     <nav className={!isOpened && 'menubar-opened'}>
       <div className="menubar">
         <div className="icons">
-          <i
+          <i 
             className={`icon-menu ${isOpened ? '' : 'icon-closed'} `}
-            onClick={() => setIsOpened(!isOpened)}>
+            onClick={() => setIsOpened(!isOpened)}
+          >
             <span></span>
           </i>
         </div>
       </div>
       <ul className={`menu ${isOpened ? 'close' : 'open'}`}>
-        <li className="menu-link">
-          <a href="#0" className="text-item">
-                        Mostra
-          </a>
-        </li>
-        <li className="menu-link sub">
-          <a href="#0" className="text-item">
-                        Filmes<span className="icon"></span>
-          </a>
-          <ul className="submenu">
-            <li className="sub-item">
-              <a href="#0">Da 5 Bloods</a>
-            </li>
-            <li className="sub-item">
-              <a href="#0">Malcom X</a>
-            </li>
-            <li className="sub-item">
-              <a href="#0">BlacKKKlansman</a>
-            </li>
-          </ul>
-        </li>
-        <li className="menu-link sub">
-          <a href="#0" className="text-item">
-                        Programação<span className="icon"></span>
-          </a>
-          <ul className="submenu">
-            <li className="sub-item">
-              <a href="#0">Dia 23</a>
-            </li>
-            <li className="sub-item">
-              <a href="#0">Dia 24</a>
-            </li>
-            <li className="sub-item">
-              <a href="#0">Dia 25</a>
-            </li>
-          </ul>
-        </li>
-        <li className="menu-link">
-          <a href="#0" className="text-item">
-                        Contato
-          </a>
-        </li>
+       {createLinks()}
       </ul>
     </nav>
   )

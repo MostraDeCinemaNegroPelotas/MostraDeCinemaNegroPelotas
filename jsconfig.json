@@ -8,6 +8,7 @@
         "@/styles/components": ["styles/components/*"],
         "@/styles/config": ["styles/config/*"],
         "@/styles/pages": ["styles/pages/*"],
-        "@/styles/shared": ["styles/shared/*"]
+        "@/Redux/*": ["redux/*"],
+        "@/public/*": ["public/*"]
     }
 }

@@ -3,7 +3,7 @@ import Menu from 'components/Menu'
 import Logo from 'components/Logo'
 import UiWrapper from 'components/UiWrapper'
 
-const Home = () => {
+const pageHome = () => {
   return (
     <UiWrapper
       background="/bg-blue-flower.png"
@@ -16,4 +16,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default pageHome

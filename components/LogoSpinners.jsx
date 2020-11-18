@@ -1,4 +1,4 @@
-const LogoSpinners = () => {
+const LogoSpinners = React.memo(() => {
   return (
     <div className="logo-spinner-container">
       <div className="logo-spinner wave1"></div>
@@ -6,6 +6,6 @@ const LogoSpinners = () => {
       <div className="logo-spinner wave3"></div>
     </div>
   )
-}
+})
 
 export default LogoSpinners

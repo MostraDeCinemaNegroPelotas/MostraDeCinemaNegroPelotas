@@ -1,0 +1,11 @@
+.slick { 
+    &-slider {
+        display: flex !important;
+        align-items: center;
+    }
+
+    &-item { 
+        min-height: 300px;
+        background-color:green;
+    }
+}

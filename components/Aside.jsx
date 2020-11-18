@@ -2,7 +2,7 @@ import Waves from './Waves'
 import Particles from './Particles'
 import SocialLinks from './SocialLinks'
 
-const Aside = () => {
+const Aside = React.memo(() => {
   return (
     <aside className="aside" id="particles-js">
       <Particles/>
@@ -12,6 +12,6 @@ const Aside = () => {
       <SocialLinks />
     </aside>
   )
-}
+})
 
 export default Aside
