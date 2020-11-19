@@ -12,6 +12,8 @@ const pageHome = () => {
       <Menu />
       <Logo />
       <Aside />
+
+      <img className="apoio" src="/apoio.png" alt=""/>
     </UiWrapper>
   )
 }

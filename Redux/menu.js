@@ -13,8 +13,8 @@ const menuSlice = createSlice({
           label: 'Lives',
           href: '/lives'
         }, {
-          label: 'Contato',
-          href: '/contato'
+          label: 'Premios',
+          href: '/premios'
         }
     ]
 })

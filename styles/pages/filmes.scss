@@ -1,14 +1,14 @@
 $pagePadding: 4rem;
+$pagePaddingDesktop: 6rem;
 
 .filmes {
     &-page {
         display: flex;
         flex-direction: column;    
         justify-content: center;
-        padding: $pagePadding 0;
         color: white;
         background-color: black;
-        background: url('/bg-red.png');
+        background: url('/bg-yellow.png');
     
         h1 { 
             font-size: $pagePadding - .5rem;
@@ -24,21 +24,126 @@ $pagePadding: 4rem;
         .ui-wrapper-bg {
             z-index: -1;
         }
+
+        .menubar-opened + section { 
+            display: none;
+        }
+        
+        .menubar-opened ~ section { 
+            display: none;
+        }
     }
 
     &-list:not(:first-child) { 
         margin-bottom: $pagePadding - 1rem;
     }
 
-    &-header { 
-        padding: 0 $pagePadding;
+    &-list-programa-wrapper { 
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
     
-        img { 
-            width: 200px;
-            cursor: pointer;
+    &-list-programa { 
+        width: 60%;
+    }
+
+    &-header {  
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        .logo { 
+            width: 60%;
+            margin: 3rem 0 2rem 0 ;
+        }
+
+        .catalogo { 
+            padding: 0 20px;
+        }
+
+        .texto,
+        .catalogo { 
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include sm { 
+        &-header {  
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            .logo { 
+                width: 30%;
+                margin: 3rem 0 1rem 0 ;
+            }
+    
+            .catalogo { 
+                padding: 0 20px;
+            }
+    
+            .catalogo { 
+                width: 40%;
+                margin-bottom: 2rem;
+            }
+    
+            .texto { 
+                width: 50%;
+                margin-bottom: 2rem;
+            }   
+        }
+
+        &-list-programa { 
+            width: 40%;
+        }
+    }
+
+    @include lg { 
+        &-header {  
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            .logo { 
+                width: 10%;
+                margin: 0 100px 0  auto;
+            }
+    
+            .catalogo { 
+                width: 30%;
+                margin-bottom: 2rem;
+                padding: 0;
+            }
+    
+            .texto { 
+                margin-left: $pagePaddingDesktop;
+                width: 30%;
+            }   
+
+            .catalogo, 
+            .texto { 
+                margin-left: $pagePaddingDesktop;
+                margin-right: auto;
+            }
+        }
+
+        &-list { 
+            margin-left: $pagePaddingDesktop;
+        }
+
+        &-list-programa-wrapper {
+            justify-content: end;
+        }
+
+        &-list-programa { 
+            width: 15%;
+        }
+        
+        &-list .container { 
+            overflow-x: auto;
+            padding-bottom: 6px;
         }
     }
 }
