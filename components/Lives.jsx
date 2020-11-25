@@ -9,12 +9,12 @@ const MutipleSlidesPerView = ({ lives }) => {
   const playMovie = (filme) =>  dispatch((triggerPlayer(filme.link)))
 
   return (
-    <div className="container">
+    <div className={lives.length > 1 ? "container": ''}>
       {
         lives.map((filme, index) => (
           <div className="card movie-item" key={index}>        
             <div className="movie-item-content">
-              <img key={index} className="movie-thumbnail" src="/lives-bg.jpg"/>
+              <img key={index} className="movie-thumbnail" src={filme.imgSrc}/>
               <div className="movie-play-icon" onClick={() => playMovie(filme)}>
                 <FontAwesomeIcon icon={Icons["faPlay"]} />
               </div>
@@ -23,10 +23,13 @@ const MutipleSlidesPerView = ({ lives }) => {
                 <p className="movie-details-info"> {filme.feat} </p>
                 <p className="movie-details-info"> {filme.estado} </p>
                 <div className="movie-details-info"> 
-                  <div className="movie-details-time">
-                    <FontAwesomeIcon icon={Icons["faClock"]} /> 
-                    <p> {filme.data} </p>
-                  </div>
+                  {
+                   filme.data && (
+                    <div className="movie-details-time">
+                      <FontAwesomeIcon icon={Icons["faClock"]} /> 
+                      <p> {filme.data} </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

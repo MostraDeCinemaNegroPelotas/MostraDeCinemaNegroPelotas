@@ -6,6 +6,7 @@ import { getPlayerData } from 'Redux/player'
 import ModalVideo from 'react-modal-video'
 import { triggerPlayer} from 'Redux/player'
 import Menu from 'components/Menu'
+import Link from 'next/link'
 
 const pageFilmes = () => {
   const lives = useSelector(getLives);
@@ -17,7 +18,9 @@ const pageFilmes = () => {
       <Menu />
       
       <section className="lives-header">
-        <img className="logo" src="/logo-mostra.png" alt=""/>
+        <Link href="/">
+          <img className="has-pointer logo" src="/logo-mostra.png" alt=""/>
+        </Link>
         <img className="titulo" src="/titulo-live.png" alt=""/>
         <img className="texto" src="/texto-live.png" alt="" srcset=""/>
       </section>

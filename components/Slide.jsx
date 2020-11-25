@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as Icons from '@fortawesome/free-solid-svg-icons'
 import ReactTooltip from 'react-tooltip'
 import { triggerPlayer} from 'Redux/player'
-import { animated } from "react-spring";
 
 
 const MutipleSlidesPerView = ({ filmes }) => {
@@ -22,7 +21,7 @@ const MutipleSlidesPerView = ({ filmes }) => {
     <div className="container">
       {
         filmes.map((filme, index) => (
-          <animated.div  className="card movie-item" key={index}>        
+          <div  className="card movie-item" key={index}>        
             <div className="movie-item-content">
               <img key={index} className="movie-thumbnail" src={filme.pic}/>
               <div className="movie-play-icon" onClick={() => playMovie(filme)}>
@@ -46,7 +45,7 @@ const MutipleSlidesPerView = ({ filmes }) => {
                 </div>
               </div>
             </div>
-          </animated.div>
+          </div>
         ))
       }
     </div>

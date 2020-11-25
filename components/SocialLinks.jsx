@@ -1,29 +1,26 @@
-import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as Brands from '@fortawesome/free-brands-svg-icons'
 
 const SocialLinks = () => {
-  const router = useRouter()
-
   const links = [
     {
       icon: 'faInstagram',
-      href: 'www.google.com'
+      href: 'https://www.instagram.com/mostra.cinema.negro.pelotas/?hl=pt-br'
     },
     {
       icon: 'faYoutube',
-      href: 'www.youtube.com'
+      href: 'https://www.youtube.com/channel/UCGFyOV4bIhNXFxSQd7PbNNw'
     },
     {
       icon: 'faFacebookF',
-      href: 'www.google.com'
+      href: 'https://www.facebook.com/mostradecinemanegrodepelotas/?epa=SEARCH_BOX'
     }
   ]
 
   return (
     <ul className="social-links">
       {links.map((link, index) => (
-        <li className="social-links-item" key={index} onClick={() => router.replace(link.href)}>
+        <li className="social-links-item" key={index} onClick={() => window.open(link.href,'_blank')}>
           <FontAwesomeIcon icon={Brands[link.icon]} />
         </li>
       ))}

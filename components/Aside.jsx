@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks'
 
 const Aside = React.memo(() => {
   return (
-    <aside className="aside" id="particles-js">
+    <aside className="aside has-pointer" id="particles-js">
       <Particles/>
       <Waves />
       <img src="/simple-logo.png" className="aside-logo"/>

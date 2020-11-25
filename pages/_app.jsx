@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 import Head from 'next/head'
 import store from '../store'
 import 'styles/main.scss'
-import 'swiper/swiper.scss';
 import 'react-modal-video/scss/modal-video.scss';
 
 const MyApp = ({ Component, pageProps }) => {

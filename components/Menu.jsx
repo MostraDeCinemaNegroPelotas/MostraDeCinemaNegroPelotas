@@ -20,7 +20,7 @@ const Menu = () => {
   }
 
   return (
-    <nav className={!isOpened && 'menubar-opened'}>
+    <nav className={!isOpened ? 'menubar-opened' : undefined}>
       <div className="menubar">
         <div className="icons">
           <i 

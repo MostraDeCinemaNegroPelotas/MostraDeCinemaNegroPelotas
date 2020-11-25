@@ -6,6 +6,7 @@ import Slide from 'components/Slide'
 import ModalVideo from 'react-modal-video'
 import { triggerPlayer} from 'Redux/player'
 import Menu from 'components/Menu'
+import Link from 'next/link'
 
 const pageFilmes = () => {
   const getCatalogoByProgramaFn = useSelector(getCatalogoByPrograma);
@@ -18,7 +19,9 @@ const pageFilmes = () => {
       <Menu />
       
       <section className="filmes-header">
-        <img className="logo" src="/simple-logo.png" alt=""/>
+        <Link href="/">
+         <img className="has-pointer logo" src="/simple-logo.png" alt=""/>
+       </Link>
         <img className="catalogo" src="/catalogo-titulo.png" alt=""/>
         <img className="texto" src="/filmes-texto.png" alt="" srcset=""/>
       </section>

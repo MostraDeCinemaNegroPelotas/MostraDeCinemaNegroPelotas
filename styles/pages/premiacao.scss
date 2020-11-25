@@ -13,9 +13,8 @@ $pagePaddingDesktop: 6rem;
     
     &-header {  
         display: flex;
-        align-items: center;
         flex-direction: column;
-        
+
         .logo { 
             width: 60%;
             margin: 3rem 0 2rem 0 ;
@@ -60,6 +59,7 @@ $pagePaddingDesktop: 6rem;
         &-header { 
             display: flex;
             flex-direction: column;
+            align-items: baseline;
             
             .logo { 
                 width: 10%;
@@ -84,6 +84,7 @@ $pagePaddingDesktop: 6rem;
     }
 }
 
-.menubar-opened + .premiacao-header { 
+.menubar-opened + .premiacao-header,
+.menubar-opened ~  .apoio { 
     display: none;
 }
